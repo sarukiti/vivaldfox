@@ -1,0 +1,65 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+:root {
+    --main-text: #000;
+    --main-bg: #F9F9FB;
+    --input-bg: #F0F0F4;
+    --input-bg-focus:#fff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-text: #fff;
+        --main-bg: #2b2a33;
+        --input-bg: #1c1b22;
+        --input-bg-focus: #42414D;
+    }
+}
+body{
+    background-color: var(--main-bg);
+    color: var(--main-text);
+ }
+#qcInput{
+    text-indent: 1em;
+    width: 100%;
+    height: 65px;
+    font-size: 28px;
+    outline: none;
+    border:solid 0px;
+    background-color: var(--input-bg);
+    color: var(--main-text);
+    border-radius: 3px;
+}
+#qcInput:focus{
+    background-color: var(--input-bg-focus);
+}
+
+#qcTable{
+    width: 100%;
+    table-layout: fixed;
+}
+td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--main-text);
+    white-space: nowrap;
+    text-indent: 0.5em;
+    padding: 0.25em;
+    border-radius: 7px;
+}
+#qcTable tr > td:nth-child(2){
+    width: 45%;
+    color: #666666;
+}
+td#text{
+    text-indent: 1em;
+}
+#qcTable tr > td:nth-child(3){
+    width: 0px;
+}
+tr.header{
+    font-weight:bold;
+}
+#qcTable .selected > td:nth-child(1) {background:#00ddff;}
