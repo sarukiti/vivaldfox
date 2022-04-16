@@ -53,7 +53,7 @@ function updateValue(e){
 
         //URL表示周り
         if (typeof urlTrigger === "undefined") urlTrigger = true;
-        if(/.+\.\w+/.test(e.target.value)){
+        if(/\.\S+$/.test(e.target.value)){
             if(urlTrigger){
                 $("#qcTable").prepend(`<tr class="url"><td>URL「${e.target.value}」を開く</td><td>${e.target.value}</td><td></td></tr>`);
                 $(".selected").removeClass('selected')
